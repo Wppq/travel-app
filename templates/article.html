@@ -12,21 +12,36 @@
 
 <body>
     <div class="flex justify-center">
-        <div class="container">
+        <div class="sm:container p-2">
             <div class="w-full">
-                <header>
-                    <div class="h-20 bg-gray-200 mb-10"></div>
+                <header class="sticky top-0 z-50 bg-white">
+                    <div class="h-20 mb-6 flex border-b-[2px]">
+                        <div class="h-full w-1/3 grid content-center">
+                            <div class="flex">
+                                <img class="w-8" src="./public/hotel.png" alt="">
+                                <h2 class="ml-2 text-xl font-bold">Logo</h2>
+                            </div>
+                        </div>
+                        <div class="h-full w-full grid content-center text-center px-20 xl:px-40">
+                            <div class="flex">
+                                <div class="cursor-pointer hover:font-bold text-xl basis-1/3">Home</div>
+                                <div class="cursor-pointer hover:font-bold text-xl basis-1/3">Paket</div>
+                                <div class="cursor-pointer hover:font-bold text-xl basis-1/3">About</div>
+                            </div>
+                        </div>
+                        <div class="h-full w-1/3 grid content-center">
+                            <div class="place-self-center bg-gray-400 w-10 h-10 rounded-full"></div>
+                        </div>
+                    </div>
                 </header>
                 <h1 class="text-3xl font-bold">Tanjung Karang</h1>
                 <h4 class="text-sm font-bold text-gray-500 pt-2">Posted 20 feb 2023</h4>
-                <div class="flex">
+                <div class="md:flex">
                     <div class="w-full h-full">
                         <div id="img">
-                            <img class="w-full h-80"
-                                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5Ec56goNlOH2CRwIFbnkN1It-0uk_B1FCoA&usqp=CAU"
-                                alt="">
+                            <img class="w-full xl:h-[30rem] h-80" src="./public/abc.jpg" alt="">
                         </div>
-                        <article class="pt-4">
+                        <article class="pt-4 text-justify">
                             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Omnis unde vel nisi quae totam
                             saepe voluptate nihil tempora. Aliquam voluptatum nulla doloremque quos ullam repudiandae ea
                             nemo laudantium praesentium alias? Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -55,26 +70,26 @@
                             saepe dolor odio voluptatibus error, voluptas enim?
                         </article>
                     </div>
-                    <div class="w-96 h-full px-4">
+                    <div class="xl:w-[40rem] md:w-96 w-full h-full px-4 text-sm md:text-md">
                         <h3 class="font-semibold">Lokasi Destinasi</h3>
-                        <iframe
+                        <iframe class="bg-gray-200 w-full h-60"
                             src="https://maps.google.com/maps?ll=-8.4553718,114.7913904&q=-8.4553718,114.7913904&t=&z=10&ie=UTF8&output=embed">
                         </iframe>
                         <h3 class="font-semibold pt-4">Fasilitas</h3>
-                        <div class="grid grid-cols-3 gap-3">
-                            <div class="p-2 border-2 flex flex-col items-center">
+                        <div class="grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 grid-cols-5 gap-3">
+                            <div class="p-2 border-2 flex rounded-xl flex-col items-center">
                                 <img class="text-center" src="./public/hotel.png" alt="">
                                 <h4>Penginapan</h4>
                             </div>
-                            <div class="p-2 border-2 flex flex-col items-center">
+                            <div class="p-2 border-2 flex rounded-xl flex-col items-center">
                                 <img class="text-center" src="./public/hotel.png" alt="">
                                 <h4>Penginapan</h4>
                             </div>
-                            <div class="p-2 border-2 flex flex-col items-center">
+                            <div class="p-2 border-2 flex rounded-xl flex-col items-center">
                                 <img class="text-center" src="./public/hotel.png" alt="">
                                 <h4>Penginapan</h4>
                             </div>
-                            <div class="p-2 border-2 flex flex-col items-center">
+                            <div class="p-2 border-2 flex rounded-xl flex-col items-center">
                                 <img class="text-center" src="./public/hotel.png" alt="">
                                 <h4>Penginapan</h4>
                             </div>
@@ -82,9 +97,50 @@
                         <h3 class="font-semibold pt-4">Rating</h3>
                         <h3 class="font-semibold">5.0</h3>
                         <h3 class="font-semibold pt-4">Komentar</h3>
+                        <div class="w-full md:h-[36rem] h-ful overflow-auto text-justify">
+                            <div class="border-2 m-2">
+                                <div class="m-4">
+                                    <div class="flex">
+                                        <div class="bg-gray-500 rounded-full w-10 h-10 overflow-hidden">
+                                            <img class="w-full h-full" src="./public/abc.jpg" alt="">
+                                        </div>
+                                        <div class="pt-2 pl-2 font-semibold">Ibnu</div>
+                                    </div>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, repellat iste
+                                        culpa ipsa beatae numquam voluptatem ut quidem rerum quam eligendi nobis facere
+                                        qui corrupti mollitia? Vero quasi nemo nulla!</p>
+                                </div>
+                            </div>
+                            <div class="border-2 m-2">
+                                <div class="m-4">
+                                    <div class="flex">
+                                        <div class="bg-gray-500 rounded-full w-10 h-10 overflow-hidden">
+                                            <img class="w-full h-full" src="./public/abc.jpg" alt="">
+                                        </div>
+                                        <div class="pt-2 pl-2 font-semibold">Ibnu</div>
+                                    </div>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, repellat iste
+                                        culpa ipsa beatae numquam voluptatem ut quidem rerum quam eligendi nobis facere
+                                        qui corrupti mollitia? Vero quasi nemo nulla!</p>
+                                </div>
+                            </div>
+                            <div class="border-2 m-2">
+                                <div class="m-4">
+                                    <div class="flex">
+                                        <div class="bg-gray-500 rounded-full w-10 h-10 overflow-hidden">
+                                            <img class="w-full h-full" src="./public/abc.jpg" alt="">
+                                        </div>
+                                        <div class="pt-2 pl-2 font-semibold">Ibnu</div>
+                                    </div>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, repellat iste
+                                        culpa ipsa beatae numquam voluptatem ut quidem rerum quam eligendi nobis facere
+                                        qui corrupti mollitia? Vero quasi nemo nulla!</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <footer class="h-20 bg-sky-300 my-10"></footer>
+                <footer class="h-20 bg-sky-300 my-4"></footer>
             </div>
         </div>
     </div>
