@@ -2,3 +2,7 @@
     font-family: 'Times New Roman', Times, serif;
     color: rgb(44, 44, 44);
 }
+
+.transparant{
+    background-color: rgba(31, 31, 31, 0.575);
+}
