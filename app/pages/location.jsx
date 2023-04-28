@@ -16,7 +16,7 @@ export default function Explore({ data }) {
                 <div className="sm:container p-2">
                     <div className="w-full">
                         <Navbar />
-                        <h1 className="text-4xl font-bold">JELAJAHI {name.name}</h1>
+                        <h1 className="text-4xl font-bold">Jelajahi {name.name}</h1>
                         <div className="bg-red-300 w-full h-80 xl:h-[35rem] lg:h-[30rem] mt-4 flex">
                             <div className="bg-yellow-300 w-full h-full border-2">
                                 <Image className="w-full h-full" src={img} alt="img.png" />
@@ -51,7 +51,7 @@ export default function Explore({ data }) {
                                             <Link 
                                                 href={{
                                                     pathname : '/destination',
-                                                    query : e.name
+                                                    query : {id :e.id}
                                                 }}
                                             >
                                                 <Image className="w-full h-full" src={`/../public/${e.path}`} width={300} height={300} alt="img.png" />
@@ -71,7 +71,7 @@ export default function Explore({ data }) {
 }
 
 export async function getServerSideProps() {
-    const res = await fetch('http://localhost:3000/api/user/destination')
+    const res = await fetch('http://localhost:3000/api/user/location')
     const data = await res.json()
 
     return { props: { data } }
