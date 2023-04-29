@@ -3,7 +3,7 @@ import Footer from '../components/footer'
 import Image from 'next/image'
 
 export default function Destination({ data }) {
-    if(data.code == 404) return <h1>{data.status}</h1>
+    if (data.code == 404) return <h1>{data.status}</h1>
     return (
         <>
             <div className="flex justify-center">
@@ -23,9 +23,8 @@ export default function Destination({ data }) {
                                             return (
                                                 <div>
                                                     <p key={`${i}-txt`} >{e}</p>
-                                                    <br/>
+                                                    <br />
                                                 </div>
-
                                             )
                                         })
                                     }
@@ -39,7 +38,7 @@ export default function Destination({ data }) {
                                 <h3 className="font-semibold pt-4">Fasilitas</h3>
                                 <div className="grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 grid-cols-5 gap-3">
                                     {
-                                        data.facilities.map((e,i) => {
+                                        data.facilities.map((e, i) => {
                                             for (const key in e) {
                                                 return (
                                                     <div key={`${i}-fac`} className="p-2 border-2 flex rounded-xl flex-col items-center">
@@ -109,7 +108,5 @@ export async function getServerSideProps(context) {
     const id = context.query.id
     const res = await fetch(`http://localhost:3000/api/user/destination?id=${id}`)
     const data = await res.json()
-
     return { props: { data } }
-
 }

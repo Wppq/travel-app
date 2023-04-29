@@ -6,10 +6,8 @@ import Link from "next/link"
 import { useRouter } from "next/router"
 
 export default function Explore({ data }) {
-
     const router = useRouter()
     const name = router.query
-
     return (
         <>
             <div className="flex justify-center">
@@ -48,10 +46,10 @@ export default function Explore({ data }) {
                                 data.map(e => {
                                     return (
                                         <div key={e.id} className="border-4 hover:bg-white bg-black border-gray-600 rounded-md p-1 relative text-center">
-                                            <Link 
+                                            <Link
                                                 href={{
-                                                    pathname : '/destination',
-                                                    query : {id :e.id}
+                                                    pathname: '/destination',
+                                                    query: { id: e.id }
                                                 }}
                                             >
                                                 <Image className="w-full h-full" src={`/../public/${e.path}`} width={300} height={300} alt="img.png" />
@@ -73,7 +71,5 @@ export default function Explore({ data }) {
 export async function getServerSideProps() {
     const res = await fetch('http://localhost:3000/api/user/location')
     const data = await res.json()
-
     return { props: { data } }
-
 }
