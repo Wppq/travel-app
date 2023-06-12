@@ -12,6 +12,11 @@
     "paths": {
         "/account": {
             "get": {
+                "security": [
+                    {
+                        "ApiAuth":[]
+                    }
+                ],
                 "description": "List of operator accounts",
                 "tags": [
                     "Admin API"
@@ -42,6 +47,11 @@
                 }
             },
             "post": {
+                "security": [
+                    {
+                        "ApiAuth":[]
+                    }
+                ],
                 "description": "Create new operator account",
                 "tags": [
                     "Admin API"
@@ -99,6 +109,11 @@
         },
         "/account/{accountId}": {
             "patch": {
+                "security": [
+                    {
+                        "ApiAuth":[]
+                    }
+                ],
                 "description": "Reset Password",
                 "tags": [
                     "Admin API"
@@ -139,6 +154,11 @@
                 }
             },
             "delete": {
+                "security": [
+                    {
+                        "ApiAuth":[]
+                    }
+                ],
                 "description": "Delete operator account by id",
                 "tags": [
                     "Admin API"
@@ -223,6 +243,11 @@
                 }
             },
             "post": {
+                "security": [
+                    {
+                        "ApiAuth":[]
+                    }
+                ],
                 "description": "Create new destination",
                 "tags": [
                     "Operator API"
@@ -281,6 +306,11 @@
                 }
             },
             "put": {
+                "security": [
+                    {
+                        "ApiAuth":[]
+                    }
+                ],
                 "description": "Update destination",
                 "tags": [
                     "Operator API"
@@ -320,6 +350,11 @@
                 }
             },
             "delete":{
+                "security": [
+                    {
+                        "ApiAuth":[]
+                    }
+                ],
                 "description": "Delete destination by id",
                 "tags": [
                     "Operator API"
@@ -395,6 +430,14 @@
         }
     },
     "components": {
+        "securitySchemes": {
+            "ApiAuth":{
+                "type": "apiKey",
+                "in": "header",
+                "name": "TOKEN-ROLE-Key",
+                "description": "Authentication for API"
+            }
+        },
         "schemas": {
             "response": {
                 "type": "object",

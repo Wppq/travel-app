@@ -1,53 +1,53 @@
 import Navbar from '../components/navbar'
 import Footer from '../components/footer'
 import Image from 'next/image'
+import hotel from '../public/hotel.png'
+import dynamic from "next/dynamic"
+import { baseUrl, baseUrlProps } from '../config'
 
-export default function Destination({ data }) {
-    if (data.code == 404) return <h1>{data.status}</h1>
+const MyMapDest = dynamic(() => import("../components/mapDestination"), { ssr: false })
+
+export default function Destination(data) {
+    if (data.code != 200) {
+        return <h1>{data.status}</h1>
+    }
+    const posted = data.data.date.split("T")[0]
     return (
         <>
             <div className="flex justify-center">
                 <div className="sm:container p-2">
                     <div className="w-full">
                         <Navbar />
-                        <h1 className="text-3xl font-bold">{data.title}</h1>
-                        <h4 className="text-sm font-bold text-gray-500 pt-2">Posted {data.date}</h4>
+                        <h1 className="text-3xl font-bold">{data.data.title}</h1>
+                        <h4 className="text-sm font-bold text-gray-500 pt-2">Posted {posted}</h4>
                         <div className="md:flex">
                             <div className="w-full h-full">
                                 <div id="img">
-                                    <Image className='w-full xl:h-[30rem] h-80' src={`/../public/${data.img}`} alt='img.jpg' width={300} height={300} />
+                                    <Image className='w-full xl:h-[30rem] h-80' src={`${baseUrlProps}/img/${data.data.image_file}`} alt='img.jpg' width={1000} height={1000} />
                                 </div>
                                 <div className="pt-4 text-justify">
-                                    {
-                                        data.text.map((e, i) => {
-                                            return (
-                                                <div>
-                                                    <p key={`${i}-txt`} >{e}</p>
-                                                    <br />
-                                                </div>
-                                            )
-                                        })
-                                    }
+                                    <article dangerouslySetInnerHTML={{ __html: data.data.text }} >
+                                    </article>
                                 </div>
                             </div>
                             <div className="xl:w-[40rem] md:w-96 w-full h-full px-4 text-sm md:text-md">
                                 <h3 className="font-semibold">Lokasi Destinasi</h3>
-                                <iframe className="bg-gray-200 w-full h-60"
-                                    src="https://maps.google.com/maps?ll=-8.4553718,114.7913904&q=-8.4553718,114.7913904&t=&z=10&ie=UTF8&output=embed">
-                                </iframe>
+                                <MyMapDest location={data.data.location} />
                                 <h3 className="font-semibold pt-4">Fasilitas</h3>
                                 <div className="grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 grid-cols-5 gap-3">
                                     {
-                                        data.facilities.map((e, i) => {
-                                            for (const key in e) {
-                                                return (
-                                                    <div key={`${i}-fac`} className="p-2 border-2 flex rounded-xl flex-col items-center">
-                                                        <Image className='text-center ' src={`/../public/${e[key].img}`} alt='logo.png' width={40} height={40} />
-                                                        <h4>{key}</h4>
+                                        data.data.facilities ? data.data.facilities.map((e, i) => {
+                                            return (
+                                                <div key={i} className="p-2 border-2 flex rounded-xl flex-col items-center group cursor-pointer">
+                                                    <div className='bg-gray-100 w-96 h-40 absolute right-60 invisible group-hover:visible p-4'>
+                                                        <p className='font-bold text-center'>{e.name}</p>
+                                                        <p>{e.desc}</p>
                                                     </div>
-                                                )
-                                            }
+                                                    <Image className='text-center ' src={hotel} alt={`${e.category}.png`} width={40} height={40} />
+                                                </div>
+                                            )
                                         })
+                                            : null
                                     }
                                 </div>
                                 <h3 className="font-semibold pt-4">Rating</h3>
@@ -58,9 +58,9 @@ export default function Destination({ data }) {
                                         <div className="m-4">
                                             <div className="flex">
                                                 <div className="bg-gray-500 rounded-full w-10 h-10 overflow-hidden">
-                                                    <Image className='w-full h-full' src={'/../public/abc.jpg'} alt='img.jpg' width={100} height={100} />
+                                                    <Image className='w-full h-full' src={'/../public/user.png'} alt='img.jpg' width={100} height={100} />
                                                 </div>
-                                                <div className="pt-2 pl-2 font-semibold">Ibnu</div>
+                                                <div className="pt-2 pl-2 font-semibold">kautsar</div>
                                             </div>
                                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, repellat iste
                                                 culpa ipsa beatae numquam voluptatem ut quidem rerum quam eligendi nobis facere
@@ -71,9 +71,9 @@ export default function Destination({ data }) {
                                         <div className="m-4">
                                             <div className="flex">
                                                 <div className="bg-gray-500 rounded-full w-10 h-10 overflow-hidden">
-                                                    <Image className='w-full h-full' src={'/../public/abc.jpg'} alt='img.jpg' width={100} height={100} />
+                                                    <Image className='w-full h-full' src={'/../public/user.png'} alt='img.jpg' width={100} height={100} />
                                                 </div>
-                                                <div className="pt-2 pl-2 font-semibold">Ibnu</div>
+                                                <div className="pt-2 pl-2 font-semibold">kautsar</div>
                                             </div>
                                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, repellat iste
                                                 culpa ipsa beatae numquam voluptatem ut quidem rerum quam eligendi nobis facere
@@ -84,9 +84,9 @@ export default function Destination({ data }) {
                                         <div className="m-4">
                                             <div className="flex">
                                                 <div className="bg-gray-500 rounded-full w-10 h-10 overflow-hidden">
-                                                    <Image className='w-full h-full' src={'/../public/abc.jpg'} alt='img.jpg' width={100} height={100} />
+                                                    <Image className='w-full h-full' src={'/../public/user.png'} alt='img.jpg' width={100} height={100} />
                                                 </div>
-                                                <div className="pt-2 pl-2 font-semibold">Ibnu</div>
+                                                <div className="pt-2 pl-2 font-semibold">kautsar</div>
                                             </div>
                                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, repellat iste
                                                 culpa ipsa beatae numquam voluptatem ut quidem rerum quam eligendi nobis facere
@@ -106,7 +106,12 @@ export default function Destination({ data }) {
 
 export async function getServerSideProps(context) {
     const id = context.query.id
-    const res = await fetch(`http://localhost:3000/api/user/destination?id=${id}`)
-    const data = await res.json()
-    return { props: { data } }
+    const name = context.query.name
+    try {
+        const res = await fetch(`${baseUrlProps}/user/${name}/destinations/${id}`)
+        const destination = await res.json()
+        return { props: destination }
+    } catch (err) {
+        console.log(err)
+    }
 }
