@@ -5,3 +5,32 @@
 .transparant {
     background-color: rgba(31, 31, 31, 0.575);
 }
+
+.leaflet-control-geocoder-form-no-error{
+    opacity: 0;
+}
+
+.leaflet-control-geocoder {
+    border-color: red;
+}
+
+.leaflet-control-geocoder ul {
+    max-height: 10rem;
+    overflow-y:auto;
+}
+
+.leaflet-control-geocoder ul li {
+    border: 2px solid black;
+    background-color: white;
+}
+
+.leaflet-control-geocoder ul li a {
+    text-align: left;
+    width: 15rem;
+    display: table-row-group;
+    cursor: pointer;
+}
+
+.leaflet-control-geocoder ul li span {
+    margin: 0 2px 0 0;
+}

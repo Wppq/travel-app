@@ -2,27 +2,27 @@ export default function location(req, res) {
     const location = [
         {
             id: 1,
-            name: "PALU",
+            name: "Palu",
             path: "abc.jpg"
         },
         {
             id: 2,
-            name: "DONGGALA",
+            name: "Donggala",
             path: "abc.jpg"
         },
         {
             id: 3,
-            name: "SIGI",
+            name: "Sigi",
             path: "abc.jpg"
         },
         {
             id: 4,
-            name: "MOROWALI",
+            name: "Morowali",
             path: "abc.jpg"
         },
         {
             id: 5,
-            name: "LUWUK",
+            name: "Luwuk",
             path: "abc.jpg"
         },
         {

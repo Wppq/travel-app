@@ -1,0 +1,24 @@
+version: "3"
+services:
+  app:
+    container_name: travel-web
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./next.config.js:/app/next.config.js
+      - ./config.js:/app/config.js
+      - ./pages:/app/pages
+    ports:
+      - "80:3000"
+  api:
+    container_name: travel-api
+    image: travel-app_api
+    ports:
+      - "3000:3000"
+    depends_on:
+      - mongodb
+  mongodb:
+    image: mongo:latest
+    ports:
+      - "27018:27017"
