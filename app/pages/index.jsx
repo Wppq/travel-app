@@ -59,7 +59,7 @@ export default function Home({ destinations }) {
                   </div>
                   <div className="grid place-content-center my-6 h-20 bg-gray-800/50">
                     <div className="flex">
-                      {/* <div className="flex-row">
+                      <div className="flex-row">
                         <input type="text" placeholder="Kota keberangkatan" value={inputValue} onChange={handleInputChange} className="bg-white h-8 w-60 mx-2 p-2" />
                         {
                           filterOptions.length > 0 ? (
@@ -69,16 +69,9 @@ export default function Home({ destinations }) {
                                   return (
                                     <div key={i}>
                                       {
-                                        e.transport.map(transport => {
-                                          return (
-                                            <div key={transport} className="border-2 border-gray-500 w-full px-2 mx-1 bg-white hover:bg-gray-200 cursor-pointer" onClick={() => {
-                                              setInputValue(`${e.name},${transport}`)
-                                              setFilter([])
-                                            }}>
-                                              {e.name}, {transport}
-                                            </div>
-                                          )
-                                        })
+                                        <div key={e.code} className="border-2 border-gray-500 w-full px-2 mx-1 bg-white hover:bg-gray-200 cursor-pointer">
+                                          {e.name}
+                                        </div>
                                       }
                                     </div>
                                   )
@@ -87,7 +80,7 @@ export default function Home({ destinations }) {
                             </div>
                           ) : null
                         }
-                      </div> */}
+                      </div>
                       <div className="flex-row">
                         <input type="text" placeholder="Destinasi Tujuan" value={inputValueDest} onChange={handleInputChangeDest} className="bg-white h-8 w-60 mx-2 p-2" />
                         {
@@ -107,12 +100,13 @@ export default function Home({ destinations }) {
                         }
                       </div>
                       {
-                        filterOptionsDest[0] ? <Link className="bg-white rounded-md text-center pt-1 px-4 cursor-pointer bg-gradient-to-r from-cyan-500 to-blue-500 hover:text-white hover:font-bold"
+                        filterOptionsDest[0] && filterOptions[0] ? <Link className="bg-white rounded-md text-center pt-1 px-4 cursor-pointer bg-gradient-to-r from-cyan-500 to-blue-500 hover:text-white hover:font-bold"
                           href={{
-                            pathname: '/destination',
+                            pathname: '/destination_search',
                             query: {
                               name: filterOptionsDest[0].name,
-                              id: filterOptionsDest[0].id_dest
+                              id: filterOptionsDest[0].id_dest,
+                              code: filterOptions[0].code
                             }
                           }}
                         >CARI</Link> : null

@@ -9,8 +9,9 @@ module.exports = {
     remotePatterns: [
       {
         protocol: "http",
-        hostname: "api",
-        // hostname: "localhost",
+        // hostname: "api",
+        hostname: "103.76.129.90",
+        port: "48666",
         pathname: "/api/v1/img/*",
       }
     ],

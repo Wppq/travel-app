@@ -1,149 +1,98 @@
 export const dataLocation = [
     {
-        name: "jakarta",
-        transport: [
-            "Bandara Soekarno-Hatta",
-            "Bandara Halim Perdanakusuma",
-            "Pelabuhan Tanjung Priok"
-        ]
+        name: "Ambon",
+        code: "AMQ"
     },
     {
-        name: "bandung",
-        transport: [
-            "Bandara Husein Sastranegara"
-        ]
+        name: "Banjarmasin",
+        code: "BDJ"
     },
     {
-        name: "surakarta",
-        transport: [
-            "Bandara Adi Sumarmo"
-        ]
+        name: "Bandung",
+        code: "BDO",
     },
     {
-        name: "semarang",
-        transport: [
-            "Bandara Ahmad Yani",
-            "Pelabuhan Tanjung Emas"
-        ]
+        name: "Balikpapan",
+        code: "BPN"
     },
     {
-        name: "yogyakarta",
-        transport: [
-            "Bandara Adisutjipto"
-        ]
+        name: "Batam",
+        code: "BTH"
     },
     {
-        name: "surabaya",
-        transport: [
-            "Bandara Juanda",
-            "Pelabuhan Tanjung Perak"
-        ]
+        name: "Aceh",
+        code: "BTJ"
     },
     {
-        name: "denpasar",
-        transport: [
-            "Bandara Ngurah Rai",
-            "Pelabuhan Benoa"
-        ]
+        name: "Jambi",
+        code: "DJB"
     },
     {
-        name: "lombok",
-        transport: [
-            "Bandara Lombok Praya"
-        ]
+        name: "Bali",
+        code: "DPS"
     },
     {
-        name: "rote",
-        transport: [
-            "Bandara El Tari"
-        ]
+        name: "Gorontalo",
+        code: "GTO"
     },
     {
-        name: "pontianak",
-        transport: [
-            "Bandara Supadio"
-        ]
+        name: "Jakarta",
+        code: "JKTA"
     },
     {
-        name: "palangkaraya",
-        transport: [
-            "Bandara Tjilik Riwut"
-        ]
+        name: "Kendari",
+        code: "KDI"
     },
     {
-        name: "banjarmasin",
-        transport: [
-            "Bandara Syamsudin Noor"
-        ]
+        name: "Medan",
+        code: "KNO"
     },
     {
-        name: "balikpapan",
-        transport: [
-            "Bandara Sultan Aji Muhammad Sulaiman"
-        ]
+        name: "Lombok",
+        code: "LOP"
     },
     {
-        name: "manado",
-        transport: [
-            "Bandara Sam Ratulangi"
-        ]
+        name: "Manado",
+        code: "MDC"
     },
     {
-        name: "gorontalo",
-        transport: [
-            "Bandara Jalaluddin"
-        ]
+        name: "Palangkaraya",
+        code: "PKY"
     },
     {
-        name: "mamuju",
-        transport: [
-            "Bandara Tampa Padang"
-        ]
+        name: "Singapore",
+        code: "SINA"
     },
     {
-        name: "makassar",
-        transport: [
-            "Bandara Sultan Hasanuddin",
-            "Pelabuhan Paotere"
-        ]
+        name: "Solo",
+        code: "SOC"
     },
     {
-        name: "kendari",
-        transport: [
-            "Bandara Haluoleo"
-        ]
+        name: "Semarang",
+        code: "SRG"
     },
     {
-        name: "banda aceh",
-        transport: [
-            "Bandara Sultan Iskandar Muda"
-        ]
+        name: "Surabaya",
+        code: "SUB"
     },
     {
-        name: "medan",
-        transport: [
-            "Bandara Kualanamu"
-        ]
+        name: "Lampung",
+        code: "TKG"
     },
     {
-        name: "sorong",
-        transport: [
-            "Bandara Domine Eduard Osok",
-            "Pelabuhan Sorong"
-        ]
+        name: "Makassar",
+        code: "UPG"
     },
     {
-        name: "jayapura",
-        transport: [
-            "Bandara Sentani",
-            "Pelabuhan Jayapura"
-        ]
+        name: "Malaysia",
+        code: "XKLA"
     },
     {
-        name: "ambon",
-        transport: [
-            "Bandara Pattimura",
-            "Pelabuhan Yos Sudarso"
-        ]
+        name: "Yogyakarta",
+        code: "YKIA"
+    },
+    {
+        name: "Papua",
+        code: "ZRM"
     }
 ]

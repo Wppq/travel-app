@@ -44,11 +44,10 @@ export default function FormAdd() {
         })
         const msg = await resp.json()
         if (msg.code == 200) {
-            router.push('/admin')
-            router.reload()
             setName('')
             setPassword('')
             setUsername('')
+            router.reload()
             return
         }
         console.log(msg)
