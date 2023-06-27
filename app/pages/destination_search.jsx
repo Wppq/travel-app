@@ -31,6 +31,7 @@ export default function Destination({ destination, tiket }) {
                                     </article>
                                 </div>
                             </div>
+                            
                             <div className="xl:w-[40rem] md:w-96 w-full h-full px-4 text-sm md:text-md md:pt-0pt-10">
                                 <h3 className="font-semibold">Lokasi Destinasi</h3>
                                 <MyMapDest location={destination.data.location} />
