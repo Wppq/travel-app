@@ -1,10 +1,8 @@
 import Navbar from '../components/navbar'
 import Footer from '../components/footer'
 import Image from 'next/image'
-import hotel from '../public/hotel.png'
 import dynamic from "next/dynamic"
 import { baseUrlProps } from '../config'
-import { useState } from 'react'
 
 const MyMapDest = dynamic(() => import("../components/mapDestination"), { ssr: false })
 
@@ -31,7 +29,7 @@ export default function Destination({ destination, tiket }) {
                                     </article>
                                 </div>
                             </div>
-                            
+
                             <div className="xl:w-[40rem] md:w-96 w-full h-full px-4 text-sm md:text-md md:pt-0pt-10">
                                 <h3 className="font-semibold">Lokasi Destinasi</h3>
                                 <MyMapDest location={destination.data.location} />
@@ -45,9 +43,8 @@ export default function Destination({ destination, tiket }) {
                                                     rounded-2xl drop-shadow-xl invisible sm:group-hover:visible  p-4'>
                                                         <p className='font-bold text-center'>{e.name}</p>
                                                         <p>{e.desc}</p>
-                                                        <Image className='text-center ' src={hotel} alt={`${e.category}.png`} width={40} height={40} />
                                                     </div>
-                                                    <Image className='text-center ' src={hotel} alt={`${e.category}.png`} width={40} height={40} />
+                                                    <Image className='text-center ' src={`/../public/${e.category}.png`} alt={`${e.category}.png`} width={40} height={40} />
                                                 </div>
                                             )
                                         })
@@ -66,7 +63,7 @@ export default function Destination({ destination, tiket }) {
                                                 </div>
                                                 <div className='ml-2'>
                                                     <p className='text-md font-semibold'>{tiket.data.price}</p>
-                                                    <p className='text-red-400' style={{ fontSize: '10px' }}>* harga tiket pesawat/ tanggal 27 bulan ini</p>
+                                                    <p className='text-red-400' style={{ fontSize: '10px' }}>* kisaran harga tiket akan berubah sesuai harga pasar</p>
                                                     <div className="m-4">
                                                     </div>
                                                 </div>

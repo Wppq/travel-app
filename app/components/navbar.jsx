@@ -1,17 +1,19 @@
 import Image from "next/image"
 import user from '../public/user.png'
-import logo from '../public/hotel.png'
+import logo from '../public/logo.png'
 import Link from "next/link"
 
 export default function Navbar() {
     return (
-        <header style={{ zIndex: 999 }} className="sticky top-0 z-50 bg-white">
+        <header style={{ zIndex: 1111 }} className="sticky top-0 z-50 bg-white">
             <div className="h-20 mb-6 flex border-b-[2px]">
                 <div className="h-full w-1/3 grid content-center">
                     <Link href="/">
                         <div className="flex">
-                            <Image className="w-8" src={logo} alt="logo" />
-                            <h2 className="ml-2 text-xl font-bold">Logo</h2>
+                            <Image className="w-10" src={logo} alt="logo" />
+                            <h2 className="ml-2 mt-4 text-xl font-bold top-10">
+                                Nompesana
+                            </h2>
                         </div>
                     </Link>
                 </div>

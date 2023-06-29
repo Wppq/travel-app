@@ -10,7 +10,7 @@ module.exports = {
       {
         protocol: "http",
         // hostname: "api",
-        hostname: "103.76.129.90",
+        hostname: "103.76.129.92",
         port: "48666",
         pathname: "/api/v1/img/*",
       }

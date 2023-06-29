@@ -46,7 +46,7 @@ export default function Home({ destinations }) {
     <>
       <div className="flex justify-center">
         <div className="w-full">
-          <div className="bg-red-300 w-full h-screen relative">
+          <div className="bg-gray-300 w-full h-screen relative">
             <Image src={img} className="w-full h-full" alt="img.jpg" />
             <div className="absolute top-40 w-full">
               <div className="box-border h-96 flex justify-center p-10 rounded-md">

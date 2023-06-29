@@ -1,9 +1,8 @@
 import Navbar from '../components/navbar'
 import Footer from '../components/footer'
 import Image from 'next/image'
-import hotel from '../public/hotel.png'
 import dynamic from "next/dynamic"
-import { baseUrl, baseUrlProps } from '../config'
+import { baseUrlProps } from '../config'
 
 const MyMapDest = dynamic(() => import("../components/mapDestination"), { ssr: false })
 
@@ -43,7 +42,7 @@ export default function Destination(data) {
                                                         <p className='font-bold text-center'>{e.name}</p>
                                                         <p>{e.desc}</p>
                                                     </div>
-                                                    <Image className='text-center ' src={hotel} alt={`${e.category}.png`} width={40} height={40} />
+                                                    <Image className='text-center ' src={`/../public/${e.category}.png`} alt={`${e.category}.png`} width={40} height={40} />
                                                 </div>
                                             )
                                         })

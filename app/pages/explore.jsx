@@ -16,15 +16,15 @@ export default function Explore({ data }) {
                     <div className="w-full">
                         <Navbar />
                         <h1 className="text-4xl font-bold">JELAJAHI SULAWESI TENGAH</h1>
-                        <div className="bg-red-300 w-full h-80 xl:h-[35rem] lg:h-[30rem] mt-4 flex">
-                            <div className="bg-yellow-300 w-full h-full border-2">
+                        <div className="bg-gray-300 w-full h-80 xl:h-[35rem] lg:h-[30rem] mt-4 flex">
+                            <div className="bg-gray-300 w-full h-full border-2">
                                 <Image className="w-full h-full" src={img} alt="img.png" />
                             </div>
-                            <div className="bg-green-300 w-[25rem] lg:w-[40rem] md:w-[30rem] h-full sm:block hidden">
+                            <div className="bg-gray-300 w-[25rem] lg:w-[40rem] md:w-[30rem] h-full sm:block hidden">
                                 <div className="bg-gray-200 h-1/2 border-2">
                                     <Image className="w-full h-full" src={img2} alt="img.png" />
                                 </div>
-                                <div className="bg-sky-200 h-1/2 border-2">
+                                <div className="bg-gray-200 h-1/2 border-2">
                                     <Image className="w-full h-full" src={img3} alt="img.png" />
                                 </div>
                             </div>
