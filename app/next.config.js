@@ -9,8 +9,7 @@ module.exports = {
     remotePatterns: [
       {
         protocol: "http",
-        hostname: "api",
-        // hostname: "localhost",
+        hostname: "api.backendwppdev.my.id",
         pathname: "/api/v1/img/*",
       }
     ],
