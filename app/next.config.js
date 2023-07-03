@@ -8,8 +8,8 @@ module.exports = {
   images: {
     remotePatterns: [
       {
-        protocol: "http",
-        hostname: "api.backendwppdev.my.id",
+        protocol: "https",
+        hostname: "backendwppdev.my.id",
         pathname: "/api/v1/img/*",
       }
     ],
